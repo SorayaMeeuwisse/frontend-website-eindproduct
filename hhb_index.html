@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Heel Holland Bakt</title>
+    <link rel="stylesheet" href="style/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul id="nav">
+                <li>Home</li>
+                <li>Agenda</li>
+                <li>Workshops</li>
+                <li>Recepten</li>
+                <li>Profiel</li>
+            </ul>
+        </nav>
+    </header>
+    <img id="HHB" src="images/achtergrond_afbeelding_crop.jpg" alt="Heel Holland Bakt afbeelding">
+
+    <main>
+        <section id="workshops">
+            <h1>Mijn workshops</h1>
+            <p class="workshop">Zoet | 19 maart | 09.00 uur - 13.00 uur | Haarlem</p>
+            <p class="workshop">Brood | 14 april | 09.00 uur - 13.00 uur | Sittard</p>
+        </section>
+
+        <!--https://www.w3schools.com/howto/howto_css_calendar.asp
+        Gebruikt voor het maken en stylen van de kalender-->
+        <section id="agenda">
+            <h1>Agenda</h1>
+            <ul class="maand">
+                <li class="vorig">&#10094;</li>
+                <li class="mei">Mei 2020</li>
+                <li class="volgend">&#10095;</li>
+            </ul>
+            <table>
+                <tr class="weekdagen">
+                    <th>M</th>
+                    <th>D</th>
+                    <th>W</th>
+                    <th>D</th>
+                    <th>V</th>
+                    <th>Z</th>
+                    <th>Z</th>
+                </tr>
+                <tr class="dagen">
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+            </table>
+            <button type="button" class="buttonindex1">Kaarten kopen</button>
+        </section>
+
+        <section id="recepten">
+            <h1 id="recepth1">Mijn recepten</h1>
+            <figure class="mijnrecepten">
+                <img src="images/suikerbrood.jpg" alt="Suikerbrood" class="mijnreceptenimg">
+                <figcaption>Suikerbrood</figcaption>
+            </figure>
+            <figure class="mijnrecepten">
+                <img src="images/verjaardagstaart.jpg" alt="Verjaardagstaart" class="mijnreceptenimg">
+                <figcaption>Verjaardagstaart</figcaption>
+            </figure>
+            <button type="button" class="buttonindex2"><a href="bakselindienen.html" class="linkbutton">Baksel indienen</a></button>
+        </section>
+
+    </main>
+
+    <script src="javascript/hhb.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul id="nav">
+                <li id="home"><a href="hhb_index.html">Home</a></li>
+                <li>Agenda</li>
+                <li>Workshops</li>
+                <li>Recepten</li>
+                <li>Profiel</li>
+            </ul>
+        </nav>
+    </header>
+    <form action="">
+        <fieldset>
+            <legend><label for="naambaksel">Naam baksel</label></legend>
+            <input type="text" id="naambaksel">
+        </fieldset>
+        <fieldset>
+            <legend>Thema</legend>
+            <input type="radio" id="oerhollands">
+            <label for="oerhollands">Oer-Hollands</label>
+            <input type="radio" id="brood">
+            <label for="brood">Brood</label>
+            <input type="radio" id="zoet">
+            <label for="zoet">Zoet</label>
+        </fieldset>
+        <fieldset>
+            <legend><label for="beschrijving">Beschrijving</label></legend>
+            <input type="text" id="beschrijving" placeholder="Hoe zou u uw baksel beschrijven?">
+        </fieldset>
+        <fieldset>
+            <legend>Foto's</legend>
+            <button type="button" id="toevoegenfoto">Voeg toe</button>
+        </fieldset>
+        <fieldset>
+            <legend><label for="ingredienten">Ingredienten</label></legend>
+            <input type="text" id="ingredienten" placeholder="BV. - 3 eieren">
+        </fieldset>
+        <fieldset>
+            <legend>Allergenen</legend>
+            <input type="checkbox" id="melk">
+            <label for="melk">Melk</label>
+            <input type="checkbox" id="pinda">
+            <label for="pinda">Pinda's</label>
+            <input type="checkbox" id="gluten">
+            <label for="gluten">Gluten</label>
+        </fieldset>
+        <fieldset>
+            <legend><label for="recept">Recept</label></legend>
+            <input type="text" id="recept" placeholder="BV. - Verwarm de oven voor op 180 graden Celsius.">
+        </fieldset>
+        <fieldset>
+            <legend><label for="email">Emailadres</label></legend>
+            <input type="email" id="email" placeholder="voorbeeld@email.com">
+        </fieldset>
+        <button type="submit" id="insturen">Stuur in</button>
+    </form>
+    <h2 id="bedankt"></h2>
+    <script src="javascript/hhb.js"></script>
+</body>
+
+</html>
