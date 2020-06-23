@@ -1,0 +1,343 @@
+/*Algemene code voor alle maten, grotendeels over de overzichtspagina*/
+/*https://heelhollandbakt.omroepmax.nl/ Veel inspiratie vandaan gehaald en om de site een beetje lijkend te maken i.v.m. knoppen*/
+* {
+    font-family: 'Fira Sans', sans-serif;
+    /*Kijken of het document goed gelinkt is
+    background-color: aqua;*/
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+a:hover {
+    color: #EDEDED !important;
+}
+
+
+#nav {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: -2.5rem;
+}
+
+li {
+    font-family: 'Poppins', sans-serif;
+}
+
+li:hover,
+p:hover,
+figcaption:hover,
+td:hover {
+    color: #EDEDED;
+}
+
+button {
+    background-color: #5d80b7;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    padding: 1rem;
+    border-radius: 3px;
+    font-size: 1rem;
+    color: #fff;
+}
+
+button:hover {
+    background-color: #4d4c4c;
+}
+
+.linkbutton {
+    font-family: 'Fira Sans', sans-serif !important;
+    color: #EDEDED;
+}
+
+main,
+form {
+    margin: auto;
+    width: 80%;
+    margin-top: 10px;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    background-color: #ee8d76;
+    color: white;
+    padding: 0px 10px;
+    margin: 0;
+    display: inline;
+}
+
+p {
+    padding: 5px;
+    padding-left: 15px;
+}
+
+/* Werkt niet, lukt niet om de figure goed in het vlak te stylen, dus dit is achterwege gelaten.
+figure {
+    //box-sizing: border-box;
+    //background-color: white;
+}*/
+
+table {
+    display: flex;
+    justify-content: center;
+    border-collapse: collapse;
+    width: 90%;
+    margin: auto;
+}
+
+th,
+td {
+    font-size: 1.3rem;
+    padding: 0.7rem;
+    text-align: center;
+}
+
+th {
+    background-color: #ee8d76;
+}
+
+/* Werkt niet, de knoppen moesten rechts onderin komen, maar ze waren niet goed te plaatsen, waarbij ze ook nog responsive bleven aan de maten van de schermen. 
+#agenda,
+#recepten{
+    position: relative;
+}
+
+.buttonindex1,
+.buttonindex2 {
+    position: absolute;
+    bottom: 10px;
+    right: -10px;
+}
+*/
+
+.buttonindex1,
+.buttonindex2 {
+    position: relative;
+    bottom: 10px;
+    left: 10px;
+}
+
+/*Code die in de js wordt opgeroepen om het formulier te laten verwijderen en tekst neer te zetten. */
+.verwijder {
+    display: none;
+}
+
+/*Desktop 1440px*/
+/*Header element*/
+@media only screen and (max-width: 1440px) {
+
+
+    header {
+        background-color: #ee8d76;
+        padding: 0.5rem;
+    }
+
+
+    img {
+        margin-top: 0.5rem;
+        width: 100%;
+        max-height: 23rem;
+        opacity: 0.85;
+        object-fit: cover;
+    }
+
+    /*Content elementen*/
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 25% 75%;
+        grid-gap: 1rem;
+    }
+
+    /*Grid spacing*/
+    #agenda {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        background-color: #fec4b5;
+    }
+
+    #recepten {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+        background-color: #fec4b5;
+    }
+
+
+    #workshops {
+        grid-column: 1 / 2;
+        grid: 1 / 2;
+        background-color: #fec4b5;
+    }
+
+
+    .mijnworkshops {
+        box-sizing: border-box;
+        padding: 0.5rem;
+        width: 13rem;
+    }
+
+    .maand {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-left: -2.5rem;
+    }
+
+    .mijnreceptenimg {
+        width: 6rem;
+        height: 6rem;
+    }
+    
+    /*https://cssreference.io/typography/  https://codepen.io/gylidian/pen/zyabWX
+    Hier staat code om de bedank tekst te stylen met font properties en transitions.
+    Moet worden weggehaald als het niet wordt gebruikt*/
+   /* h2#bedankt{
+        font-family: 'Poppins', sans-serif;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 100px;
+        box-sizing: border-box;
+        border: #fec4b5 3px solid;
+        padding: 10px;
+        font-size: 4.5rem;
+        font-style: oblique;
+        text-align: center;
+        line-height: 1.25;
+        transform: rotate(-10deg)
+            skew(-10deg, 5deg);
+        box-shadow: 30px -10px 10px #fec4b5;
+        transition: width 2s;
+    }
+    
+    h2#bedankt:hover{
+        width: 75%;
+    }
+    
+    h2#bedankt::first-line{
+        text-transform: uppercase;
+        color: white;
+        text-shadow: 2px 6px 10px black;
+        
+    }*/
+
+
+}
+
+/*Mobiel 480px*/
+@media only screen and (max-width: 480px) {
+    body {
+        min-width: 360px;
+    }
+
+    #HHB {
+        display: none;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .maand {
+        margin-left: -2.5rem;
+        box-sizing: border-box;
+    }
+
+    table {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    /*https://www.w3schools.com/css/css3_animations.asp
+    Code om een animatie weer te geven van de tekst.*/
+    h2#bedankt{
+        color: blue;
+        animation-name: veranderkleur;
+        animation-duration: 4s;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+    }
+    
+    @keyframes veranderkleur{
+        0% {color: blue;}
+        16% {color: purple;}
+        32% {color: pink;}
+        48% {color: red;}
+        64% {color: orange;}
+        80% {color: yellow;}
+        100% {color: green;}   
+    }
+
+}
+
+/*Detailpagina*/
+/*https://www.w3schools.com/css/css_form.asp. Voor het gebruik van formulieren met pseudoclasses en styling*/
+legend label,
+legend {
+    font-family: 'Poppins', sans-serif;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border: #fec4b5 3px solid;
+}
+
+#recept::placeholder,
+#beschrijving::placeholder,
+#ingredienten::placeholder,
+#email::placeholder {
+    color: #4d4c4c;
+}
+
+/* Werkt niet
+input[type="email"]:required {
+    border: red dashed 5px;
+}*/
+
+input[type="email"]:valid {
+    background-color: lightgreen;
+    opacity: 0.7;
+}
+
+input[type="email"]:invalid {
+    background-color: red;
+    opacity: 0.7;
+}
+
+#beschrijving,
+#recept,
+#ingredienten,
+#naambaksel {
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 1rem;
+}
+
+#email {
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+
+/*Moet worden uitgeschakeld zodra de transitions op de desktop pagina worden geactiveerd*/
+h2#bedankt {
+    box-sizing: none;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    width: 95%;
+    margin: auto;
+    margin-top: 1rem;
+    text-align: center;
+}
+
